@@ -1,17 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
+#This chunk of the code is for set and get functions.
 makeCacheMatrix <- function(x = matrix()) {
    m <- NULL
     set <- function(matrix) {
          x <<- matrix
          m <<- NULL
     }
+   # variable x is used for matrix, variable m, i left the same.
      get <- function() {
      x
- }
+ }  
  setInverse <- function(inverse){
  m <<- inverse
  }
@@ -22,14 +19,12 @@ m
 
 }
 
-
-## Write a short comment describing this function
-
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        ## This code is for returning a matrix that is the inverse of 'x'
         m <- x$getmean()
      if(!is.null(m)) {
          message("getting cached data")
+       #this return a message during run time
          return(m)
      }
      data <- x$get()
